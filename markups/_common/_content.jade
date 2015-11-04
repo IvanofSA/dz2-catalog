@@ -1,0 +1,111 @@
+mixin list-product(products)
+    div.list-products.clearfix
+        each product in products
+            - var product = product
+            div.list-product.clearfix
+                .product__slider.slider-product
+                    .slider-product__wrap-main-img
+                        img(src="img/#{product.mainImg}").slider-product__main-img
+                    .slider-product__support
+                        ul.slider-product__support-list
+                            each img in product.supportImg
+                                li.slider-product__support-list__item
+                                    img(src="img/#{img}").slider-product__support-list__item__img
+                    .list-product__article
+                        span.list-product__article-title Артикул
+                        span.list-product__article-text= product.article
+                .product__description
+                    h2.product__description-title= product.title
+                    p.product__description-text= product.description
+                    .product__description-options
+                                ul.info
+                                    each typeInfo, index in product.typeInfo
+                                        -for(var j=0;j<1;j++)
+                                            li.type= typeInfo
+                                ul.fono
+                                    each answerInfo, index in product.answerInfo
+                                        -for(var a=0;a<1;a++)
+                                            li.type= answerInfo
+
+
+
+
+
+
+
+                //div.card-product__slider.slider-product
+                //    div.slider-product__wrap-main-img
+                //        img(src="img/#{product.mainImg}").slider-product__main-img
+                //    div.slider-product__controls
+                //        ul.slider-product__controls-list
+                //            each img in product.controlImg
+                //                li.slider-product__controls-list__item
+                //                    img(src="img/#{img}").slider-product__controls-list__item__img
+                //    div.card-product__article.article-product
+                //        span.article-product__text Артикул
+                //        span.article-product__value= product.articleValue
+                //div.card-product__description.description-product
+                //    h2.description-product__title= product.title
+                //    p.description-product__text= product.description
+                //    div.description-product__options.options-product
+                //        ul.options-product__list
+                //            li.options-product__item
+                //                div.options-product__item__inner.clearfix
+                //                    span.options-product__item__param Тип SIM-карт
+                //                    span.options-product__item__value Micro-SIM
+                //
+                //            li.options-product__item
+                //                div.options-product__item__inner.clearfix
+                //                    span.options-product__item__param Количество SIM-карт
+                //                    span.options-product__item__value 1
+                //
+                //            li.options-product__item
+                //                div.options-product__item__inner.clearfix
+                //                    span.options-product__item__param Цвет
+                //                    span.options-product__item__value Белый
+                //
+                //            li.options-product__item
+                //                div.options-product__item__inner.clearfix
+                //                    span.options-product__item__param ОС
+                //                    span.options-product__item__value Android
+                //
+                //            li.options-product__item
+                //                div.options-product__item__inner.clearfix
+                //                    span.options-product__item__param Связь 3G
+                //                    span.options-product__item__value Есть
+                //
+                //            li.options-product__item
+                //                div.options-product__item__inner.clearfix
+                //                    span.options-product__item__param 4G(LTE)
+                //                    span.options-product__item__value Нет
+                //
+                //            li.options-product__item
+                //                div.options-product__item__inner.clearfix
+                //                    span.options-product__item__param GPS-модуль
+                //                    span.options-product__item__value Micro-SIM
+                //
+                //
+                //    div.description-product__rating
+                //        ul.description-product__rating__list
+                //            li.description-product__rating__item.description-product__rating__item_active
+                //                a(href="#").description-product__rating__link.
+                //            li.description-product__rating__item.description-product__rating__item_active
+                //                a(href="#").description-product__rating__link
+                //            li.description-product__rating__item.description-product__rating__item_active
+                //                a(href="#").description-product__rating__link
+                //            li.description-product__rating__item.description-product__rating__item_active
+                //                a(href="#").description-product__rating__link
+                //            li.description-product__rating__item
+                //                a(href="#").description-product__rating__link
+                //        span.description-product__rating__value 4
+                //
+                //
+                //div.card-product__purchase.purchase-product.clearfix
+                //    div.purchase-product__price= product.price
+                //    div.purchase-product__buy
+                //        input(type="submit", value = "В корзину").purchase-product__in-basket
+                //        div.purchase-product__wrap-availability
+                //            span.purchase-product__availability В наличии
+
+
+

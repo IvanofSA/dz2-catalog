@@ -1,0 +1,15 @@
+.filters.clearfix
+    .filter.filter__sort
+        span.filter__title Сортировать по
+        select.filter__select
+            option(value="price").filter__select__option цене
+            option(value="rating").filter__select__option популярности
+    .filter.filter__view
+        span.filter__title Вид каталога
+        ul.view__list
+            li.view__list__item.view-list__item_detailed
+                a(href="#").view-list__link
+            li.view__list__item.view-list__item_tile
+                a(href="#").view-list__link
+            li.view__list__item.view-list__item_list
+                a(href="#").view-list__link

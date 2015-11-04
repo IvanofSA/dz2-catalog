@@ -1,0 +1,17 @@
+footer.footer
+        .container
+            .footer__left
+                a(href="#").logo
+                    img(src="/img/logos/footer-logo.png" alt="cooltech logo").logo__img-footer
+                    .logo__text-footer cooltech
+            .footer__rigth
+                - var icons = ['fb', 'vk', 'tw']
+                ul.socials-footer
+                    each icon in icons
+                        li(class="socials__item socials__item-footer_" + icon)
+                            a(href="#").socials__link-footer
+                                .socials__icon-footer
+                    +nav-footer('navigation__menu-footer', ['Планштеы', 'Мобильные телефоны', 'Mp3 плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессураы', 'Бытовая техника'])
+        .copyright
+            span.copyright-text
+                | &copy; Все права защищены

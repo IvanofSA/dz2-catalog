@@ -1,0 +1,124 @@
+//@import "../sprites/sprite";
+
+.footer{
+  background: url("../img/bg/footer_lodyas.png");
+  min-height: 220px;
+  //@include clearfix;
+  position: relative;
+}
+.footer__left{
+  float: left;
+  width: 50%;
+  position: relative;
+  height: 100%;
+}
+.footer__rigth{
+  float: right;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.logo__img-footer {
+  display: block;
+  max-width: 250px;
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+}
+.logo__text-footer {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+.socials-footer{
+  text-align: right;
+  font-size: 0;
+  margin-bottom: 35px;
+  padding-top: 35px;
+}
+.socials-footer__list{
+  position: absolute;
+  right:0px;
+  top:45px;
+  list-style: none;
+}
+.socials-footer__item{
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 15px;
+
+}
+.socials-footer__item:first-child{
+  margin-left:0px;
+}
+.socials__link-footer{
+  display: block;
+  width: 45px;
+  height: 45px;
+  @include border-radius(50%);
+  background-color: #fff;
+  position: relative;
+  margin-left: 15px;
+  .socials__link-footer:first-child{
+    margin-left: 0;
+  }
+}
+$items: fb, vk, tw;
+$dark-socials-map: sprite-map('icons/socials-dark/*.png', $spacing: 70px);
+
+@each $item in $items {
+  .socials__item-footer_#{$item} {
+    .socials__icon-footer {
+      @include get-sprite($dark-socials-map, $item);
+      @include absolute-center;
+            &:hover {
+                $icon-name: $item + '-hover';
+                @include get-sprite($dark-socials-map, $icon-name);
+              }
+    }
+  }
+}
+.navigation__menu-footer{
+  width: 100%;
+  min-height: 52px;
+  position: absolute;
+  right: 0px;
+  bottom: 30px;
+  text-align: right;
+}
+
+.navigation__menu-footer__list {
+  list-style: none;
+  width: 100%;
+  font: 12px $font-semibold;
+}
+.navigation__menu-footer__item{
+  display:inline-block;
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+.navigation__menu-footer__link {
+  color: $color-white;
+  &:hover {
+    color: $color-orange;
+  }
+}
+.copyright{
+  clear: both;
+  text-align: center;
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #494949;
+}
+.copyright-text{
+  //position: absolute;
+  color: $color-white;
+  width: 100%;
+  font: 10px 'open_sanslight_italic';
+  text-align: center;
+  padding: 6px;
+  //border-top: 2px solid #494949;
+}
+

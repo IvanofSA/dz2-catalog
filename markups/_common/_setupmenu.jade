@@ -1,0 +1,70 @@
+.sidebar
+    .categories
+        ul.categories__list
+            - var items = ['Флагманы', 'Бюджетные телефоны']
+            each item in items
+                li(class="categories__item" + ((item === 'Бюджетные телефоны') ? ' active' : ''))
+                    a(href="#").categories__link= item
+    .accordeon
+        ul.menu-setup__list
+            li.menu-setup__item
+                a(href="" class="accordion__trigger") Наличие в магазинах
+                    span.st-arrow Open or Close
+                ul.menu-setup__list-presence
+                    -var items = ["Во всех магазинах", "В ближайшем ко мне магазине"]
+                    each item in items
+                        li.list-radio__item
+                            label.list-radio__label
+                                input(type = "radio" name="radio__check").list-radio__input-radio--origin
+                                .list-radio__input-radio--fake
+                                .list-radio__item__title= item
+            li.menu-setup__item
+                a(href="" class="accordion__trigger") Бренды
+                    span.st-arrow Open or Close
+                ul.menu-setup__list-presence
+                    form.brand
+                        -var items = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
+                        each item in items
+                            li.list-check__item
+                                label.list-check__label
+                                    input(type = "checkbox" class="check__item-origin")
+                                    .list-check__input-check--fake
+                                    .list-check__item__title= item
+
+                        a.accordeon__reset-filter Сбросить фильтр
+
+            li.menu-setup__item
+                a(href="" class="accordion__trigger") Цена
+                    span.st-arrow Open or Close
+                ul.menu-setup__list-presence
+                    .filter__slider
+                        .filter__slider-displays
+                            .filter__slider-left
+                                .filter__slider-text от
+                                input(name="" type="text" placeholder="").filter__slider-input.filter__slider-input_from
+                            .filter__slider-right
+                                .filter__slider-text до
+                                input(name="" type="text" placeholder="").filter__slider-input.filter__slider-input_to
+                        div(class="filter__slider-element" data-min="0" data-max="30000")
+            li.menu-setup__item
+                a(href="" class="accordion__trigger") Цвет
+                    span.st-arrow Open or Close
+                ul.menu-setup__list-presence
+                    .colors
+                        -var colors = ["red", "gray", "red", "dark-blue", "red", "gray", "orange", "green", "blue", "orange", "orange", "brown"]
+                        each item in colors
+                            li.list-colors__item
+                                a(href="#", data-color=item class="list-colors__link list-colors__link-#{item}")
+
+            li.menu-setup__item
+                a(href="" class="accordion__trigger") Операционные системы
+                    span.st-arrow Open or Close
+                ul.menu-setup__list-presence
+                    -var items = ["Android", "iOS", "Windows Mobile", "Symbian", "Custom"]
+                    each item in items
+                        li.list-check__item
+                            label.list-check__label
+                                input(type = "checkbox" class="check__item-origin")
+                                .list-check__input-check--fake
+                                .list-check__item__title= item
+                    a.accordeon__reset-filter Сбросить фильтр
