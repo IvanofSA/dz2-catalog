@@ -37,19 +37,19 @@
   width: 333px;
   float: left;
   background: $color-white;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
   box-sizing: border-box;
   border: 1px solid #dee1e4;
   border-radius: 5px;
   overflow: hidden;
 }
 .accordion__trigger{
-  padding: 10px 0 10px 25px;
-  display: block;
-  text-decoration: none;
-  font: 15px 'open_sanssemibold', sans-serif;
   color: $color-text;
   position: relative;
+  padding: 12px 0 10px 27px;
+  display: block;
+  text-decoration: none;
+  font: 16px 'open_sanssemibold', sans-serif;
 }
   .st-arrow{
   text-shadow: 1px 1px 1px #fff;
@@ -100,7 +100,7 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
 
 .list-radio__item {
   list-style: none;
-
+  padding: 7px 0 9px 26px;
 
   &:last-child{
     margin-bottom: 0;
@@ -161,6 +161,7 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
 }
 .list-check__item {
   list-style: none;
+  padding: 7px 0 9px 28px;
   &:last-child{
     margin-bottom: 0;
   }
@@ -235,10 +236,7 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
 .check__text {
   @extend .radio__text
 }
-.list-radio__item{
-  position: relative;
-  padding: 10px 0 10px 25px;
-}
+
 .radio__text{
   position: absolute;
   left: 55px;
@@ -250,7 +248,7 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
   font: 14px "open_sanssemibold", sans-serif;
   text-decoration: underline;
   cursor: pointer;
-  padding: 10px 0 20px 25px;
+  padding: 6px 0 6px 29px;
   display: block;
 }
 .filter__slider-displays {
@@ -262,32 +260,57 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
 .filter__slider-left {
   float: left;
   width: 50%;
+  @include open-sans(semibold);
+  .filter__slider-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 3px;
+  }
+  .filter__slider-input {
+    padding: 6px 8px;
+    width: 83px;
+    margin-left: 12px;
+    margin-top: 4px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .filter__slider-right {
   float: right;
   width: 50%;
-  text-align: right;
+  text-align: center;
+  @include open-sans(semibold);
+  .filter__slider-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 15px;
+  }
+  .filter__slider-input {
+    padding: 6px 8px;
+    width: 83px;
+    margin-left: 10px;
+    margin-top: 4px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .filter__slider-input {
   @extend .search__form-input;
-  padding: 10px 8px;
-  width: 83px;
   @include inlineblock(middle);
 }
 
-.filter__slider-text {
-  @include inlineblock(middle);
-  font-size: 14px;
-  line-height: 16px;
-}
 .ui-slider-horizontal {
   height: 3px;
   background: $grey;
   @include border-radius(0);
   border: 0 none;
-  margin-bottom: 14px;
+  margin-bottom: 32px;
   width: 288px;
   margin-left: 25px;
 
@@ -312,20 +335,22 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
 .colors{
   padding-right: 55px;
   padding-left: 10px;
+  padding-top: 2px;
+  margin-bottom: -10px
 }
 .list-colors {
-  padding: 0;
-  margin-left: -22px;
-  font-size: 0;
-  padding-right: 60px;
+  //padding: 0;
+  //margin-left: -22px;
+  //font-size: 0;
+  //padding-right: 60px;
 }
 
 .list-colors__item {
   display: inline-block;
   list-style: none;
-  margin: 0 0 20px 15px;
+  margin: 0px 0 17px 18px;
 }
-$colors: red, gray, red, dark-blue, red, yellow, orange, green, blue, orange, orange, brown;
+$colors: "red", "gray", "blue", "white", "orange", "yellow", "green", "brown", "dark-blue", "black", "pink", "gold";
 
 @each $color in $colors {
   .list-colors__link-#{$color} {
@@ -333,6 +358,7 @@ $colors: red, gray, red, dark-blue, red, yellow, orange, green, blue, orange, or
     display: block;
     width: 35px;
     height: 35px;
+    //padding-top: 3px;
     cursor: pointer;
     background: #{$color};
   }

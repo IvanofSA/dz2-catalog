@@ -86,3 +86,8 @@ footer {
 .main__content{
     @include clearfix;
 }
+.attension{
+    .main-title{
+        margin-bottom: 18px;
+    }
+}

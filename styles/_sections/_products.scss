@@ -1,12 +1,10 @@
-.products {
-  margin-bottom: 50px;
-}
 
 .products__list {
   border: 1px solid $grey;
   @include border-radius(7px);
   overflow: hidden;
   background: #fff;
+  margin-bottom: 69px;
 }
 
 .products__item {
@@ -18,7 +16,9 @@
 }
 
 .products__item-inner {
-  padding: 19px 22px;
+  padding: 18px;
+  position: relative;
+  margin-bottom: -5px;
   @include clearfix;
   position: relative;
 }
@@ -33,7 +33,8 @@
 }
 
 .products__slideshow-block {
-  margin-bottom: 14px;
+  margin-bottom: 9px;
+
 }
 
 .products__slideshow-display {
@@ -92,7 +93,8 @@
 }
 
 .products__article {
-  text-align: center;
+  text-align: left;
+  margin-left: 12px;
 }
 
 .products__article-word {
@@ -120,7 +122,7 @@
 }
 
 .products__desc-title {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 19px;
   @include open-sans(regular);
   color: #010101;
@@ -129,7 +131,7 @@
 }
 
 .products__desc-options {
-  margin-bottom: 14px;
+  margin-bottom: 6px;
 }
 
 .products__option-item {
@@ -150,7 +152,9 @@
 }
 
 /* --------- rating --------- */
-
+.description-product__rating__list{
+  margin-left: 3px;
+}
 .description-product__rating {
   @include inlineblock(middle);
   margin-bottom: 7px;
@@ -169,10 +173,10 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
   color: #fbfbfb;
   font-size: 12px;
   line-height: 15px;
-  width: 30px;
+  width: 28px;
   background: #b5beca;
   @include border-radius(20px);
-  margin-left: 8px;
+  margin-left: 13px;
   text-align: center;
   @include open-sans(semibold);
   margin-top: 4px;
@@ -186,7 +190,7 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
   width: 123px;
   text-align: right;
   border-left: 1px solid $grey;
-
+  padding-left: 7px;
 }
 
 .products__info {
@@ -204,7 +208,7 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
 .products__buy-btn {
   @include inlineblock();
   text-decoration: none;
-  padding: 9px 12px;
+  padding: 7px 19px;
   @include open-sans(bold);
   @include border-radius(4px);
   background: $orange;
@@ -214,16 +218,17 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
 
 .products__price {
   color: $black;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 22px;
   @include open-sans(semibold);
 }
 
 .products__availability {
-  @include open-sans(bold);
+  @include open-sans(semibold);
   font-size: 12px;
   line-height: 14px;
   color: #7f7f7f;
+  padding-right: 10px;
 
   &:before {
     content: "";
@@ -232,12 +237,13 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
     @include border-radius(50%);
     background: #60ac49;
     @include inlineblock(middle);
-    margin-right: 8px;
+    margin-right: 7px;
   }
 }
 .rub {
   font-family: 'als_rublregular';
   font-style: normal;
+  margin-left: 4px;
 
   &:after {
     content: 'a';

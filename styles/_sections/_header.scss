@@ -13,20 +13,21 @@
 .socials__item {
   @include inlineblock(middle);
   margin-left: 12px;
+  width: 26px;
+  height: 26px;
+  @include border-radius(50%);
+  background: #333333;
+  position: relative;
 
   &:first-child {
     margin-left: 0;
   }
 }
 
-.socials__link {
-  display: block;
-  width: 26px;
-  height: 26px;
-  @include border-radius(50%);
-  background: #333333;
-  position: relative;
-}
+//.socials__link {
+//
+//
+//}
 
 .socials__icon {
   @include absolute-center;
@@ -37,9 +38,10 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 
 @each $social in $socials {
   .socials__item_#{$social} {
-    .socials__icon {
+    .socials__link {
       @include get-sprite($socials-map, $social);
-
+      display: block;
+      @include absolute-center ;
     }
   }
 }
@@ -56,6 +58,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 .address {
   @include inlineblock(middle);
   margin-left: 65px;
+  padding: 4px 4px;
   &:before {
     content: '';
     @include get-sprite($misc-sprite, pin);
@@ -83,11 +86,12 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 
 .header__bottom {
   background: #f4f4f4;
-  padding: 31px 0 20px;
+  padding: 22px 0 16px 0;
 }
 
 .logo {
   float: left;
+  padding-top: 8px;
 }
 
 .logo__img {
@@ -105,6 +109,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
   float: left;
   margin-right: 50px;
   margin-left: 56px;
+  padding-top: 8px;
 }
 
 .menu {
@@ -112,14 +117,17 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
   padding-top: 8px;
 }
 .menu__list{
-  margin-left: 37px;
+  margin-left: 1px;
+  padding-top: 8px;
 }
 .menu__link {
   font-size: 16px;
   line-height: 18px;
   color: $black;
   @include open-sans(semibold);
-
+  .active{
+    color: $orange;
+  }
   &:hover {
     color: $orange;
   }
@@ -127,7 +135,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 
 .menu__item {
   @include inlineblock();
-  margin-left: 28px;
+  margin-left: 31px;
 
   &:first-child {
     margin-left: 0;
@@ -137,19 +145,21 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 .search__form-input {
   border: 1px solid #dee1e4;
   @include border-radius(5px);
-  padding: 8px 15px;
-  width: 259px;
+  padding: 8px 17px;
+  width: 293px;
   margin-right: -7px;
   outline: none;
 }
 
 .search__form-submit {
-  width: 78px;
-  height: 36px;
+  width: 80px;
+  height: 34px;
   background: $orange;
   color: #ffffff;
   @include open-sans(semibold);
   @include border-radius(0 5px 5px 0);
   border: 1px solid $orange;
+  margin-left: -1px;
+  font-size: 16px;
 }
 

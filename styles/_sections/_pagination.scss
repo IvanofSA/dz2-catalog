@@ -1,5 +1,6 @@
 .pagination {
   text-align: right;
+  margin-bottom: 28px;
 }
 
 .pagination__list {
@@ -8,12 +9,13 @@
 
 .pagination__item {
   width: 26px;
-  height: 26px;
+  height: 24px;
   @include inlineblock();
   @include border-radius(3px);
   border: 1px solid $grey;
   position: relative;
   overflow: hidden;
+  margin: -1px;
 }
 
 .pagination__link {
@@ -32,10 +34,10 @@
 
 .pagination__mark {
   @include absolute-center;
-  line-height: 26px;
+  line-height: 28px;
   text-align: center;
   @include open-sans(bold);
-  font-size: 12px;
+  font-size: 11px;
   color: #7f7f7f;
 }
 

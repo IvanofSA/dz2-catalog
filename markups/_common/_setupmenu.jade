@@ -1,9 +1,9 @@
 .sidebar
     .categories
         ul.categories__list
-            - var items = ['Флагманы', 'Бюджетные телефоны']
+            - var items = ['Флагманы', 'Бюджетные линейка']
             each item in items
-                li(class="categories__item" + ((item === 'Бюджетные телефоны') ? ' active' : ''))
+                li(class="categories__item" + ((item === 'Бюджетные линейка') ? ' active' : ''))
                     a(href="#").categories__link= item
     .accordeon
         ul.menu-setup__list
@@ -51,7 +51,7 @@
                     span.st-arrow Open or Close
                 ul.menu-setup__list-presence
                     .colors
-                        -var colors = ["red", "gray", "red", "dark-blue", "red", "gray", "orange", "green", "blue", "orange", "orange", "brown"]
+                        -var colors = ["red", "gray", "blue", "white", "orange", "yellow", "green", "brown", "dark-blue", "black", "pink", "gold"]
                         each item in colors
                             li.list-colors__item
                                 a(href="#", data-color=item class="list-colors__link list-colors__link-#{item}")
