@@ -1,6 +1,6 @@
 .pagination {
   text-align: right;
-  margin-bottom: 28px;
+  margin-bottom: 31px;
 }
 
 .pagination__list {
@@ -34,6 +34,7 @@
 
 .pagination__mark {
   @include absolute-center;
+  top: -2px;
   line-height: 28px;
   text-align: center;
   @include open-sans(bold);

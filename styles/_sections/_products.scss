@@ -4,7 +4,7 @@
   @include border-radius(7px);
   overflow: hidden;
   background: #fff;
-  margin-bottom: 69px;
+  margin-bottom: 66px;
 }
 
 .products__item {
@@ -30,6 +30,7 @@
 .products__slideshow {
   width: 140px;
   float: left;
+  margin-left: 3px;
 }
 
 .products__slideshow-block {

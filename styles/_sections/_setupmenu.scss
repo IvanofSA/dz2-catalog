@@ -46,7 +46,7 @@
 .accordion__trigger{
   color: $color-text;
   position: relative;
-  padding: 12px 0 10px 27px;
+  padding: 13px 0 10px 27px;
   display: block;
   text-decoration: none;
   font: 16px 'open_sanssemibold', sans-serif;
@@ -121,7 +121,7 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
   position: relative;
   @include transition(border-color .3s);
   @include inlineblock();
-  left: -10px;
+  left: -7px;
 
   &:after {
     content: "";
@@ -256,7 +256,13 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
   margin-bottom: 18px;
   padding: 0 25px 0 25px;
 }
-
+.filter__slider-input {
+  padding: 6px 8px;
+  width: 64px;
+  margin-top: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
 .filter__slider-left {
   float: left;
   width: 50%;
@@ -267,14 +273,10 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
     font-size: 14px;
     line-height: 16px;
     margin-left: 3px;
+    padding-top: 3px;
   }
   .filter__slider-input {
-    padding: 6px 8px;
-    width: 83px;
-    margin-left: 12px;
-    margin-top: 4px;
-    display: inline-block;
-    vertical-align: middle;
+    margin-left: 10px;
   }
 }
 
@@ -289,14 +291,12 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
     font-size: 14px;
     line-height: 16px;
     margin-left: 15px;
+    padding-top: 3px;
+    padding-right: 7px;
   }
   .filter__slider-input {
-    padding: 6px 8px;
-    width: 83px;
-    margin-left: 10px;
-    margin-top: 4px;
-    display: inline-block;
-    vertical-align: middle;
+    //margin-left: 6px;
+    padding-left: 9px;
   }
 }
 
