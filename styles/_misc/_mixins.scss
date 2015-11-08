@@ -67,7 +67,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
 }
 @mixin open-sans($style: regular) {
-  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
 
   @if ($style == light) {
 	font-weight: 100;
@@ -75,10 +75,12 @@
 
   @if ($style == regular) {
 	font-weight: 400;
+    font-family: 'open_sansregular';
   }
 
   @if ($style == semibold) {
 	font-weight: 600;
+    font-family: 'open_sanssemibold';
   }
 
   @if ($style == bold) {

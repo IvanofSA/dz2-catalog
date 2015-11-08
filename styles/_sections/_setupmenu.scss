@@ -46,10 +46,13 @@
 .accordion__trigger{
   color: $color-text;
   position: relative;
-  padding: 13px 0 10px 27px;
+  padding: 13px 40px 10px 27px;
   display: block;
   text-decoration: none;
   font: 16px 'open_sanssemibold', sans-serif;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
   .st-arrow{
   text-shadow: 1px 1px 1px #fff;
@@ -170,6 +173,7 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
   position: relative;
   padding-left: 29px;
   cursor: pointer;
+  display: block;
 }
 .check__item-origin{
   position: absolute;
@@ -248,20 +252,20 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
   font: 14px "open_sanssemibold", sans-serif;
   text-decoration: underline;
   cursor: pointer;
-  padding: 6px 0 6px 29px;
+  padding: 5px 0 6px 29px;
   display: block;
 }
 .filter__slider-displays {
   @include clearfix;
   margin-bottom: 18px;
   padding: 0 25px 0 25px;
-}
-.filter__slider-input {
-  padding: 6px 8px;
-  width: 64px;
-  margin-top: 4px;
-  display: inline-block;
-  vertical-align: middle;
+  .filter__slider-input {
+    padding: 6px 8px;
+    width: 64px;
+    margin-top: 4px;
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 .filter__slider-left {
   float: left;
@@ -285,6 +289,7 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
   width: 50%;
   text-align: center;
   @include open-sans(semibold);
+}
   .filter__slider-text {
     display: inline-block;
     vertical-align: middle;
@@ -295,13 +300,19 @@ $select-tr-map: sprite-map('icons/select-tr/*.png', $spacing: 70px);
     padding-right: 7px;
   }
   .filter__slider-input {
-    //margin-left: 6px;
     padding-left: 9px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 1px 0 rgba(148, 148, 148, 0.43);
+    display: inline-block;
+    box-sizing: border-box;
+    width: 83px;
+    padding: 6px 8px;
+    margin-left: 15px;
   }
-}
+
 
 .filter__slider-input {
-  @extend .search__form-input;
   @include inlineblock(middle);
 }
 

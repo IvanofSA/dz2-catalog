@@ -41,8 +41,12 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
     .socials__link {
       @include get-sprite($socials-map, $social);
       display: block;
-      @include absolute-center
- ;   }
+      @include absolute-center;
+      &:hover {
+        $icon-name: $social + '-hover';
+        @include get-sprite($socials-map, $icon-name);
+      }
+    }
   }
 }
 
@@ -86,7 +90,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 
 .header__bottom {
   background: #f4f4f4;
-  padding: 22px 0 29px 0;
+  padding: 21px 0 29px 0;
 }
 
 .logo {
@@ -105,16 +109,12 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
   left: -9999px;
 }
 
-.search {
-  float: left;
-  margin-right: 50px;
-  margin-left: 56px;
-  padding-top: 8px;
-}
+
 
 .menu {
-  float: left;
+  float: right;
   padding-top: 8px;
+
 }
 .menu__list{
   margin: 0;
@@ -143,25 +143,41 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
     margin-left: 0;
   }
 }
-
-.search__form-input {
-  border: 1px solid #dee1e4;
-  @include border-radius(5px);
-  padding: 8px 17px;
-  width: 255px;
-  margin-right: -7px;
-  outline: none;
+.search {
+  float: left;
+  margin-left: 56px;
+  padding-top: 8px;
+  font-size: 0;
+  .search__form-input {
+    border: 1px solid #dee1e4;
+    //margin-right: -7px;
+    outline: none;
+    box-sizing: border-box;
+    background: #fbfbfb;
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #7f7f7f;
+    height: 35px;
+    width: 288px;
+    font: 14px "open_sanslight", sans-serif;
+    padding: 10px 17px 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .search__form-submit {
+    background: $orange;
+    margin-left: -1px;
+    box-sizing: border-box;
+    color: #fff;
+    border: none;
+    background: #ff6d30;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font: 16px "open_sanssemibold", sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    height: 35px;
+    width: 79px;
+  }
 }
-
-.search__form-submit {
-  width: 80px;
-  height: 34px;
-  background: $orange;
-  color: #ffffff;
-  @include open-sans(semibold);
-  @include border-radius(0 5px 5px 0);
-  border: 1px solid $orange;
-  margin-left: -1px;
-  font-size: 16px;
-}
-
